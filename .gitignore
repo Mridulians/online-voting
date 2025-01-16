@@ -2,3 +2,5 @@ node_modules/
 build/
 .env
 .codegpt
+
+This is an git ignore file
