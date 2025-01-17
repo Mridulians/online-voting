@@ -23,7 +23,7 @@ const Voting = () => {
 
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/send-otp", { name, email });
+      await axios.post("https://online-voting-v119.onrender.com/api/send-otp", { name, email });
       alert("OTP sent to your email!");
       setOtpSent(true);
     } catch (err) {
@@ -37,7 +37,7 @@ const Voting = () => {
   const verifyOtp = async (finalOtp) => {
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/verify-otp", {
+      const res = await axios.post("https://online-voting-v119.onrender.com/api/verify-otp", {
         email,
         otp: finalOtp,
       });

@@ -38,7 +38,7 @@ const Party = () => {
 
     try {
       setLoading(true);
-      await axios.post("http://localhost:5000/api/vote", { name: selectedPartyName });
+      await axios.post("https://online-voting-v119.onrender.com/api/vote", { name: selectedPartyName });
       alert("Your Vote Casted..");
       logOut();
       navigate("/");
